@@ -1,4 +1,0 @@
-#!/bin/bash
-
-target=$([[ $1 ]]&&printf "$1"||printf '.')
-echo $target
