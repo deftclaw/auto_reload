@@ -1,0 +1,8 @@
+#!/bin/bash
+
+bswatch() {
+  target=$([[ $1 ]]&&printf "$1"||printf '.')
+  [[ $(../test/is_dir $target) ]] \
+    && dunstify -A $(echo dir_pass >> /tmp/every.lg) 'is_dir' 'TRUE' \
+    || dunstify -A $(echo dir_fail >> /tmp/every.lg) 'is_dir' 'FALSE'
+}
